@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Attendance Successful</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Attendance Marked Successfully!</h1>
+
+    <hr>
+
+    <h3>Student Information</h3>
+
+    <p><strong>Student ID:</strong> {{ student_id }}</p>
+
+    <p><strong>Student Name:</strong> {{ student_name }}</p>
+
+    <p><strong>Course Code:</strong> {{ course_code }}</p>
+
+    <p><strong>Status:</strong> Present</p>
+
+    <br>
+
+    <a href="/">
+        <button>Mark Another Attendance</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

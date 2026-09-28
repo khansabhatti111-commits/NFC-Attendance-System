@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>NFC Card Scan</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>NFC Attendance System</h1>
+
+    <hr>
+
+    <h2>Scan NFC Card</h2>
+
+    <p>Place the student's NFC card near the reader.</p>
+
+    <div class="nfc-icon">
+        📱
+    </div>
+
+    <p>For testing, enter the NFC Card ID manually.</p>
+
+    <form method="POST" action="/nfc-scan">
+
+        <label>NFC Card ID:</label>
+
+        <input
+            type="text"
+            name="nfc_card_id"
+            placeholder="Example: NFC001"
+            required
+        >
+
+        <br><br>
+
+        <label>Course Code:</label>
+
+        <input
+            type="text"
+            name="course_code"
+            placeholder="Example: CS301"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">Scan NFC Card</button>
+
+    </form>
+
+    <br>
+
+    <a href="/">
+        <button type="button">Back to Home</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

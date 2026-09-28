@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NFC Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>NFC Attendance System</h1>
+
+    <p class="welcome">
+        Smart and efficient student attendance management system
+    </p>
+
+    <hr>
+
+    <h2>Attendance Management</h2>
+
+    <p>
+        Mark student attendance using an NFC card or enter student
+        information manually.
+    </p>
+
+    <br>
+
+    <a href="/nfc-scan">
+        <button>Scan NFC Card</button>
+    </a>
+
+    <br><br>
+
+    <a href="/">
+        <button>Manual Attendance</button>
+    </a>
+
+    <br><br>
+
+    <a href="/attendance">
+        <button>View Attendance Records</button>
+    </a>
+
+    <br><br>
+
+    <a href="/dashboard">
+        <button>Admin Dashboard</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

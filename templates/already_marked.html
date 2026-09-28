@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Attendance Already Marked</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Attendance Already Marked</h1>
+
+    <hr>
+
+    <h3>Student Information</h3>
+
+    <p><strong>Student ID:</strong> {{ student_id }}</p>
+
+    <p><strong>Student Name:</strong> {{ student_name }}</p>
+
+    <p><strong>Course Code:</strong> {{ course_code }}</p>
+
+    <p><strong>Status:</strong> Already Present Today</p>
+
+    <br>
+
+    <a href="/">
+        <button>Go Back</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

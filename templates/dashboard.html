@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Admin Dashboard</h1>
+
+    <hr>
+
+   <h2>Attendance Overview</h2>
+
+<div class="dashboard-cards">
+
+    <div class="dashboard-card">
+        <h3>Total Students</h3>
+        <p>{{ total_students }}</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>Total Attendance</h3>
+        <p>{{ total_attendance }}</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>Today's Attendance</h3>
+        <p>{{ today_attendance }}</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>Attendance Rate</h3>
+        <p>{{ "%.2f"|format(attendance_rate) }}%</p>
+    </div>
+
+</div>
+    <hr>
+
+    <h2>Recent Attendance</h2>
+
+    <table>
+
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+
+        {% for record in recent_records %}
+
+        <tr>
+
+            <td>{{ record.student_id }}</td>
+
+            <td>{{ record.student_name }}</td>
+
+            <td>{{ record.course_code }}</td>
+
+            <td>{{ record.attendance_date }}</td>
+
+            <td>{{ record.attendance_time }}</td>
+
+            <td>{{ record.status }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+   <a href="/register-student">
+    <button>Register New Student</button>
+</a>
+
+<br><br>
+
+<a href="/students">
+    <button>View Students</button>
+</a>
+
+<br><br>
+
+<a href="/">
+    <button>Back to Home</button>
+</a>
+<br><br>
+
+<a href="/logout">
+    <button>Logout</button>
+</a>
+</div>
+
+</body>
+
+</html>
